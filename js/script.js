@@ -1,5 +1,5 @@
 function playGame(playerInput) {
-  function playGame(playerInput) {
+  clearMessages ()
     function getMoveName(argMoveId) {
       if (argMoveId == 1) {
         return 'kamień';
@@ -59,29 +59,22 @@ function playGame(playerInput) {
     }
 
     displayResult(computerMove, playerMove);
-  }
-  playGame(3);
+  
 }
 let playRock = document.getElementById('play-rock');
 
-playRock.addEventListener('click', buttonClicked);
-
-function buttonClicked() {
+playRock.addEventListener('click', () => {
   playGame(1);
-}
+});
 
 let playPaper = document.getElementById('play-paper');
 
-playPaper.addEventListener('click', buttonClicked);
-
-function buttonClicked() {
+playPaper.addEventListener('click', () => {
   playGame(2);
-}
+});
 
 let playScissors = document.getElementById('play-scissors');
 
-playScissors.addEventListener('click', buttonClicked);
-
-function buttonClicked() {
+playScissors.addEventListener('click', () => {
   playGame(3);
-}
+});
