@@ -2,6 +2,7 @@
   const stone = 'kamień';
   const paper = 'papier';
   const scissors = 'nożyce';
+  const unknownMove = 'nieznany ruch';
 
   function playGame(playerInput) {
   clearMessages ()
@@ -9,12 +10,12 @@
       if (argMoveId == 1) {
         return stone;
       } else if (argMoveId == 2) {
-        return 'papier';
+        return paper;
       } else if (argMoveId == 3) {
-        return 'nożyce';
+        return scissors;
       } else {
         printMessage('Nie znam ruchu o id ' + argMoveId + '.');
-        return 'nieznany ruch';
+        return unknownMove;
       }
     }
     let randomNumber = Math.floor(Math.random() * 3 + 1);
@@ -32,21 +33,21 @@
     function displayResult(argComputerMove, argPlayerMove) {
       printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
 
-      if (argComputerMove == stone && argPlayerMove == 'papier') {
+      if (argComputerMove == stone && argPlayerMove == paper) {
         printMessage('Ty wygrywasz!');
-      } else if (argComputerMove == stone && argPlayerMove == 'nożyce') {
+      } else if (argComputerMove == stone && argPlayerMove == scissors) {
         printMessage('Ja wygrywam!');
-      } else if (argComputerMove == paper && argPlayerMove == 'kamień') {
+      } else if (argComputerMove == paper && argPlayerMove == stone) {
         printMessage('Ja wygrywam!');
-      } else if (argComputerMove == paper && argPlayerMove == 'nożyce') {
+      } else if (argComputerMove == paper && argPlayerMove == scissors) {
         printMessage('Ty wygrywasz!');
-      } else if(argComputerMove == scissors && argPlayerMove == 'papier') {
+      } else if(argComputerMove == scissors && argPlayerMove == paper) {
         printMessage('Ja wygrywam!');
-      } else if (argComputerMove == scissors && argPlayerMove == 'kamień') {
+      } else if (argComputerMove == scissors && argPlayerMove == stone) {
         printMessage('Ty wygrywasz!');
       } else if (argComputerMove == argPlayerMove) {
         printMessage('OH! Remis');
-      } else if (argPlayerMove == 'nieznany ruch') {
+      } else if (argPlayerMove == unknownMove) {
         printMessage('UPS..coś poszło nie tak :(');
       }
     }
