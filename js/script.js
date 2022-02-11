@@ -34,31 +34,19 @@
 
       if (argComputerMove == stone && argPlayerMove == 'papier') {
         printMessage('Ty wygrywasz!');
-      } else if (argComputerMove == stone && argPlayerMove == 'kamień') {
-        printMessage('OH! Remis');
       } else if (argComputerMove == stone && argPlayerMove == 'nożyce') {
         printMessage('Ja wygrywam!');
-      } else if (argComputerMove == stone && argPlayerMove == 'nieznany ruch') {
-        printMessage('UPS..coś poszło nie tak :(');
-      }
-
-      if (argComputerMove == paper && argPlayerMove == 'papier') {
-        printMessage('OH! Remis');
       } else if (argComputerMove == paper && argPlayerMove == 'kamień') {
         printMessage('Ja wygrywam!');
       } else if (argComputerMove == paper && argPlayerMove == 'nożyce') {
         printMessage('Ty wygrywasz!');
-      } else if (argComputerMove == paper && argPlayerMove == 'nieznany ruch') {
-        printMessage('UPS..coś poszło nie tak :(');
-      }
-
-      if (argComputerMove == scissors && argPlayerMove == 'papier') {
+      } else if(argComputerMove == scissors && argPlayerMove == 'papier') {
         printMessage('Ja wygrywam!');
       } else if (argComputerMove == scissors && argPlayerMove == 'kamień') {
         printMessage('Ty wygrywasz!');
-      } else if (argComputerMove == scissors && argPlayerMove == 'nożyce') {
+      } else if (argComputerMove == argPlayerMove) {
         printMessage('OH! Remis');
-      } else if (argComputerMove == scissors && argPlayerMove == 'nieznany ruch') {
+      } else if (argPlayerMove == 'nieznany ruch') {
         printMessage('UPS..coś poszło nie tak :(');
       }
     }
