@@ -24,8 +24,6 @@
 
     let computerMove = getMoveName(randomNumber);
 
-    console.log('Gracz wpisał: ' + playerInput);
-
     let playerMove = getMoveName(playerInput);
 
     const displayResult = function(argComputerMove, argPlayerMove) {
