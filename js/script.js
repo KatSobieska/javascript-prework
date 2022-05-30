@@ -4,9 +4,9 @@
   const scissors = 'nożyce';
   const unknownMove = 'nieznany ruch';
 
-  const playGame = function(playerInput) {
-  clearMessages ()
-    const getMoveName = function(argMoveId) {
+  const playGame = function (playerInput) {
+    clearMessages()
+    const getMoveName = function (argMoveId) {
       if (argMoveId == 1) {
         return stone;
       } else if (argMoveId == 2) {
@@ -26,7 +26,7 @@
 
     let playerMove = getMoveName(playerInput);
 
-    const displayResult = function(argComputerMove, argPlayerMove) {
+    const displayResult = function (argComputerMove, argPlayerMove) {
       printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
 
       if (argComputerMove == stone && argPlayerMove == paper) {
@@ -37,7 +37,7 @@
         printMessage('Ja wygrywam!');
       } else if (argComputerMove == paper && argPlayerMove == scissors) {
         printMessage('Ty wygrywasz!');
-      } else if(argComputerMove == scissors && argPlayerMove == paper) {
+      } else if (argComputerMove == scissors && argPlayerMove == paper) {
         printMessage('Ja wygrywam!');
       } else if (argComputerMove == scissors && argPlayerMove == stone) {
         printMessage('Ty wygrywasz!');
@@ -49,23 +49,23 @@
     }
 
     displayResult(computerMove, playerMove);
-  
-}
-let playRock = document.getElementById('play-rock');
 
-playRock.addEventListener('click', () => {
-  playGame(1);
-});
+  }
+  let playRock = document.getElementById('play-rock');
 
-let playPaper = document.getElementById('play-paper');
+  playRock.addEventListener('click', () => {
+    playGame(1);
+  });
 
-playPaper.addEventListener('click', () => {
-  playGame(2);
-});
+  let playPaper = document.getElementById('play-paper');
 
-let playScissors = document.getElementById('play-scissors');
+  playPaper.addEventListener('click', () => {
+    playGame(2);
+  });
 
-playScissors.addEventListener('click', () => {
-  playGame(3);
-});
+  let playScissors = document.getElementById('play-scissors');
+
+  playScissors.addEventListener('click', () => {
+    playGame(3);
+  });
 }
